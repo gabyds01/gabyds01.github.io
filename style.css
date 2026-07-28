@@ -1,315 +1,87 @@
-/* Base Reset & Typography */
+/* Import custom fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Color variables based on portfolio_linux_minimalist.html design */
+:root {
+    --sys-bg: #0d1117; /* GitHub / Linux Dark background */
+    --sys-card: #161b22; /* Subtle container dark */
+    --sys-border: #30363d; /* Clean subtle border */
+    --sys-hover: #21262d;
+    --sys-green: #2ea043; /* Terminal success green */
+    --sys-cyan: #38bdf8; /* Tech accent cyan */
+    --sys-purple: #a855f7; /* Infra accent purple */
+    --sys-text: #f0f6fc; /* Primary bright text */
+    --sys-muted: #8b949e; /* Muted text */
+}
+
+/* Base resets & typography */
 * {
     box-sizing: border-box;
 }
+
 body {
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif;
+    background-color: var(--sys-bg);
+    color: var(--sys-text);
+    font-family: "Inter", sans-serif;
     line-height: 1.6;
-    color: #e0e0e0;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: #0a0e14; /* Dark black-blue background */
-}
-
-/* Header & Navigation */
-header {
-    border-bottom: 2px solid #1a2333;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-@media (min-width: 600px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-.logo {
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #00f0ff; /* Bright Cyan */
-    font-family: monospace;
-    text-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
-}
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-nav a {
-    text-decoration: none;
-    color: #8fa0b5;
-    font-weight: 500;
-    font-family: monospace;
-    transition: color 0.2s;
-}
-nav a:hover {
-    color: #00f0ff;
-    text-decoration: none;
-}
-
-/* Sections & Containers */
-section {
-    padding: 20px 0;
-}
-h1 {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-h2 {
-    font-size: 1.75rem;
-    margin-top: 0;
-    color: #ffffff; /* Section titles in white */
-}
-h3 {
-    font-size: 1.35rem;
-    color: #00a8ff; /* Light Blue secondary headers */
-}
-h4 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #00f0ff;
-    font-family: monospace;
-}
-hr {
-    border: 0;
-    border-top: 1px solid #1a2333;
-    margin: 40px 0;
-}
-p {
-    color: #b0bac0;
-}
-ul {
-    padding-left: 20px;
-    color: #b0bac0;
-}
-li {
-    margin-bottom: 8px;
-}
-
-/* Utility classes */
-.subtitle {
-    font-family: monospace;
-    color: #00a8ff; /* Blue accent */
-}
-.mt-15 {
-    margin-top: 15px;
-}
-.mt-20 {
-    margin-top: 20px;
-}
-.mt-25 {
-    margin-top: 25px;
-}
-.mt-30 {
-    margin-top: 30px;
-}
-
-/* Grid Layouts */
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-@media (min-width: 768px) {
-    .grid-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.grid-3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-@media (min-width: 768px) {
-    .grid-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Project Item */
-.project-card {
-    background: #101622; /* Dark card background */
-    border: 1px solid #1a2333;
-    border-radius: 6px;
-    padding: 25px;
-    margin-top: 20px;
-}
-.project-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-bottom: 1px solid #1a2333;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    gap: 5px;
-}
-@media (min-width: 600px) {
-    .project-header {
-        flex-direction: row;
-        align-items: baseline;
-    }
-}
-.project-title {
     margin: 0;
-    font-size: 1.4rem;
-    color: #ffffff;
+    min-height: 100vh;
 }
-.project-status {
-    font-size: 0.85rem;
-    background-color: rgba(0, 240, 255, 0.1);
-    color: #00f0ff;
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-weight: 600;
-    width: fit-content;
-    border: 1px solid rgba(0, 240, 255, 0.2);
+
+.font-mono {
+    font-family: "Fira Code", monospace;
 }
-.project-type {
-    font-family: monospace;
-    font-size: 0.85rem;
-    color: #00f0ff; /* Cyan accent for project type */
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+
+/* Linux terminal prompt highlight effect */
+.prompt-symbol::before {
+    content: "$ ";
+    color: var(--sys-green);
     font-weight: bold;
 }
-.tag {
-    display: inline-block;
-    background: #1a2333;
-    color: #00f0ff;
-    border: 1px solid rgba(0, 240, 255, 0.2);
-    padding: 3px 8px;
-    border-radius: 3px;
-    font-size: 0.8rem;
-    margin-right: 5px;
-    margin-top: 5px;
-}
-.diagram-box {
-    margin-top: 20px;
-    border: 1px dashed #1a2333;
-    background: #0a0e14;
-    padding: 20px;
-    border-radius: 4px;
-    text-align: center;
-    font-family: monospace;
-    color: #8fa0b5;
+
+/* Subtle grid pattern background */
+.dot-matrix {
+    background-image: radial-gradient(var(--sys-border) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
-/* Stack Layer Card */
-.stack-card {
-    background: #101622;
-    border: 1px solid #1a2333;
-    padding: 20px;
-    border-radius: 6px;
+/* Reusable custom utility classes from tailwind config mapping to style.css */
+.bg-sys-bg {
+    background-color: var(--sys-bg);
+}
+.bg-sys-card {
+    background-color: var(--sys-card);
+}
+.bg-sys-green {
+    background-color: var(--sys-green);
+}
+.border-sys-border {
+    border-color: var(--sys-border);
+}
+.text-sys-green {
+    color: var(--sys-green);
+}
+.text-sys-cyan {
+    color: var(--sys-cyan);
+}
+.text-sys-purple {
+    color: var(--sys-purple);
+}
+.text-sys-text {
+    color: var(--sys-text);
+}
+.text-sys-muted {
+    color: var(--sys-muted);
+}
+.hover\:bg-sys-hover:hover {
+    background-color: var(--sys-hover);
+}
+.hover\:text-sys-cyan:hover {
+    color: var(--sys-cyan);
 }
 
-/* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-form label {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #00a8ff;
-}
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #1a2333;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    font-family: inherit;
-    background: #101622;
-    color: #ffffff;
-    transition:
-        border-color 0.2s,
-        box-shadow 0.2s;
-}
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form textarea:focus {
-    border-color: #00f0ff;
-    box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
-    outline: none;
-}
-form textarea {
-    height: 120px;
-    resize: vertical;
-}
-form button {
-    background-color: #00f0ff;
-    color: #0a0e14; /* Dark text for high contrast on bright cyan */
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    width: fit-content;
-    align-self: flex-start;
-    transition:
-        background-color 0.2s,
-        box-shadow 0.2s;
-    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
-}
-form button:hover {
-    background-color: #00d2ff;
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
-}
-
-/* Contact Info List */
-.contact-list {
-    list-style: none;
-    padding-left: 0;
-}
-.contact-list li {
-    margin-bottom: 15px;
-    font-size: 1.05rem;
-}
-.contact-list a {
-    color: #00f0ff;
-    text-decoration: none;
-}
-.contact-list a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    margin-top: 80px;
-    border-top: 1px solid #1a2333;
-    padding-top: 30px;
-    text-align: center;
-    color: #8fa0b5;
-    font-size: 0.9rem;
-}
-footer a {
-    color: #00a8ff;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.2s;
-}
-footer a:hover {
-    color: #00f0ff;
+/* Selection highlights */
+::selection {
+    background-color: var(--sys-cyan);
+    color: var(--sys-bg);
 }

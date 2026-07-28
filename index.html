@@ -1,263 +1,598 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Gabriel Da Silva | Portfolio</title>
+        <title>Gabriel Da Silva | Backend & DevOps Portfolio</title>
+
+        <!-- External stylesheet & combined script -->
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+
+        <!-- Tailwind CSS & FontAwesome -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
     </head>
-    <body>
-        <!-- Header -->
-        <header>
-            <a href="#" class="logo">dev @ Gabriel Da Silva</a>
-            <nav>
-                <a href="#about">01. /about me</a>
-                <a href="#projects">02. /projects</a>
-                <a href="#stack">03. /stack</a>
-                <a href="#education">04. /education</a>
-                <a href="#contact">05. /contact</a>
-            </nav>
+    <body
+        class="dot-matrix min-h-screen flex flex-col justify-between antialiased selection:bg-sys-cyan selection:text-sys-bg"
+    >
+        <!-- HEADER -->
+        <header
+            class="sticky top-0 z-50 bg-[#0d1117]/90 backdrop-blur-md border-b border-sys-border"
+        >
+            <div
+                class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between"
+            >
+                <!-- Logo / Terminal Ident -->
+                <a
+                    href="#"
+                    class="flex items-center space-x-2 font-mono text-sm font-semibold hover:text-sys-cyan transition-colors"
+                >
+                    <span class="text-sys-green font-bold">&gt;</span>
+                    <span class="text-sys-text">dev</span
+                    ><span class="text-sys-muted">@</span
+                    ><span class="text-sys-cyan">gabriel-dasilva</span>
+                    <span
+                        class="animate-pulse inline-block w-2 h-4 bg-sys-green ml-1"
+                    ></span>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav
+                    class="hidden md:flex items-center space-x-8 text-xs font-mono text-sys-muted"
+                >
+                    <a
+                        href="#about"
+                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
+                    >
+                        <span class="text-sys-green">01.</span> /about-me
+                    </a>
+                    <a
+                        href="#projects"
+                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
+                    >
+                        <span class="text-sys-green">02.</span> /projects
+                    </a>
+                    <a
+                        href="#stack"
+                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
+                    >
+                        <span class="text-sys-green">03.</span> /stack
+                    </a>
+                    <a
+                        href="#education"
+                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
+                    >
+                        <span class="text-sys-green">04.</span> /education
+                    </a>
+                    <a
+                        href="#contact"
+                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
+                    >
+                        <span class="text-sys-green">05.</span> /contact
+                    </a>
+                </nav>
+
+                <!-- Actions CTA -->
+                <div class="flex items-center space-x-3 md:hidden">
+                    <a
+                        href="#contact"
+                        class="md:hidden text-sys-muted hover:text-white p-1"
+                    >
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </a>
+                </div>
+            </div>
         </header>
 
-        <main>
-            <!-- 01. About Me Section -->
-            <section id="about">
-                <span class="subtitle">* Computer Engineer - UNaM</span>
-                <h1>Backend Developer and DevOps</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+        <main
+            class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-20 w-full flex-1"
+        >
+            <!-- HERO / ABOUT SECTION -->
+            <section id="about" class="pt-4 space-y-6">
+                <div
+                    class="inline-flex items-center space-x-2 text-xs font-mono bg-sys-card border border-sys-border px-3 py-1.5 rounded-full text-sys-muted"
+                >
+                    <span
+                        class="inline-block w-2 h-2 rounded-full bg-sys-green"
+                        style="
+                            width: 8px;
+                            height: 8px;
+                            min-width: 8px;
+                            min-height: 8px;
+                            border-radius: 50%;
+                            background-color: var(--sys-green);
+                        "
+                    ></span>
+                    <span>Computer Engineer — UNaM</span>
+                </div>
+
+                <div class="space-y-4 max-w-3xl">
+                    <h1
+                        class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight"
+                    >
+                        <span class="text-sys-cyan">Backend Developer</span>
+                        and
+                        <span class="text-sys-green">DevOps</span>
+                    </h1>
+
+                    <p
+                        class="text-sys-muted text-base sm:text-lg leading-relaxed"
+                    >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                    </p>
+                </div>
             </section>
 
-            <!-- 02. Projects Section -->
-            <section id="projects">
-                <h2>Projects</h2>
-                <p>
-                    Engineering cases, software architecture, and
-                    infrastructure.
-                </p>
-
-                <!-- Project Card Placeholder -->
-                <div class="project-card">
-                    <div class="project-type">
-                        THESIS PROJECT • EMBEDDED SYSTEMS & BACKEND
+            <!-- PROYECTOS -->
+            <section id="projects" class="space-y-8">
+                <div
+                    class="border-b border-sys-border pb-4 flex items-end justify-between"
+                >
+                    <div>
+                        <h2
+                            class="text-2xl font-bold text-white tracking-tight flex items-center gap-2"
+                        >
+                            <span class="text-sys-green font-mono text-lg"
+                                >&gt;</span
+                            >
+                            Projects
+                        </h2>
+                        <p class="text-xs font-mono text-sys-muted mt-1">
+                            Engineering cases, software architecture, and
+                            infrastructure
+                        </p>
                     </div>
-                    <div class="project-header">
-                        <h3 class="project-title">[Project Name]</h3>
-                        <span class="project-status"
-                            >[Status: e.g., Completed]</span
+                    <span
+                        class="text-xs font-mono text-sys-muted hidden sm:inline-block"
+                        >[Project Case Study]</span
+                    >
+                </div>
+
+                <div class="space-y-8">
+                    <!-- PROJECT CARD -->
+                    <div
+                        class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-6 hover:border-sys-muted/50 transition-colors"
+                    >
+                        <div
+                            class="flex flex-wrap items-center justify-between gap-3 border-b border-sys-border pb-4"
+                        >
+                            <div>
+                                <div
+                                    class="flex items-center space-x-2 text-xs font-mono text-sys-cyan mb-1"
+                                >
+                                    <span
+                                        >THESIS PROJECT • EMBEDDED SYSTEMS &amp;
+                                        BACKEND</span
+                                    >
+                                </div>
+                                <h3 class="text-xl font-bold text-white">
+                                    [Project Name]
+                                </h3>
+                            </div>
+                            <div
+                                class="flex items-center space-x-2 font-mono text-xs"
+                            >
+                                <span
+                                    class="bg-sys-green/10 text-sys-green border border-sys-green/30 px-2.5 py-1 rounded-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-circle-check text-[10px] mr-1"
+                                    ></i>
+                                    [Status: e.g., Completed]
+                                </span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
+                        >
+                            <!-- Description & Details -->
+                            <div class="lg:col-span-7 space-y-4">
+                                <p
+                                    class="text-sm text-sys-muted leading-relaxed"
+                                >
+                                    <strong>Description:</strong> Lorem ipsum
+                                    dolor sit amet, consectetur adipiscing elit.
+                                    Placeholder for your project description
+                                    detailing the overall scope and impact.
+                                </p>
+
+                                <div
+                                    class="space-y-2 text-xs font-mono text-sys-text"
+                                >
+                                    <div class="flex items-start space-x-2">
+                                        <i
+                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
+                                        ></i>
+                                        <span
+                                            ><strong
+                                                >Technical Challenge:</strong
+                                            >
+                                            Describe the complex problem that
+                                            had to be solved (e.g., latency,
+                                            low-resource hardware, reliable
+                                            messaging).</span
+                                        >
+                                    </div>
+                                    <div class="flex items-start space-x-2">
+                                        <i
+                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
+                                        ></i>
+                                        <span
+                                            ><strong>Solution:</strong> Describe
+                                            the architectural and software
+                                            solution implemented to solve the
+                                            challenge.</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Skills Tags -->
+                                <div
+                                    class="pt-2 flex flex-wrap gap-2 text-xs font-mono"
+                                >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
+                                        >Skill 1</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
+                                        >Skill 2</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
+                                        >Skill 3</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- System Architecture Placeholder -->
+                            <div
+                                class="lg:col-span-5 bg-sys-bg border border-sys-border rounded-lg p-4 font-mono text-xs"
+                            >
+                                <div
+                                    class="text-xs text-sys-muted border-b border-sys-border pb-2 mb-3 flex justify-between"
+                                >
+                                    <span
+                                        >SYSTEM ARCHITECTURE &amp;
+                                        DIAGRAMS</span
+                                    >
+                                    <i
+                                        class="fa-solid fa-diagram-project text-sys-cyan"
+                                    ></i>
+                                </div>
+
+                                <div
+                                    class="p-6 text-center text-sys-muted border border-dashed border-sys-border rounded bg-sys-card"
+                                >
+                                    <h4
+                                        class="text-xs font-bold text-sys-text mb-2"
+                                    >
+                                        Architecture Diagram Placeholder
+                                    </h4>
+                                    <p class="text-[10px]">
+                                        [Insert system diagram, infrastructure
+                                        design, or sequence flow here]
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STACK DE TECNOLOGÍAS -->
+            <section id="stack" class="space-y-6">
+                <div class="border-b border-sys-border pb-4">
+                    <h2
+                        class="text-2xl font-bold text-white tracking-tight flex items-center gap-2"
+                    >
+                        <span class="text-sys-green font-mono text-lg"
+                            >&gt;</span
+                        >
+                        Technologies Matrix &amp; Stack
+                    </h2>
+                    <p class="text-xs font-mono text-sys-muted mt-1">
+                        Layered classification of my engineering and development
+                        stack
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs"
+                >
+                    <!-- Layer 1: Backend -->
+                    <div
+                        class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3"
+                    >
+                        <div
+                            class="flex items-center justify-between text-sys-cyan font-bold border-b border-sys-border pb-2"
+                        >
+                            <span>L1 :: BACKEND</span>
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <ul class="space-y-2 text-sys-muted">
+                            <li class="flex justify-between">
+                                <span class="text-sys-text">Python</span>
+                                <span class="text-sys-green">Advanced</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-sys-text">C / C++</span>
+                                <span class="text-sys-green">Advanced</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Layer 2: Infrastructure -->
+                    <div
+                        class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3"
+                    >
+                        <div
+                            class="flex items-center justify-between text-sys-purple font-bold border-b border-sys-border pb-2"
+                        >
+                            <span>L2 :: INFRASTRUCTURE</span>
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <ul class="space-y-2 text-sys-muted">
+                            <li class="flex justify-between">
+                                <span class="text-sys-text">Docker</span>
+                                <span class="text-sys-green">Advanced</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-sys-text">CI/CD</span>
+                                <span class="text-sys-green">Advanced</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-sys-text">Linux</span>
+                                <span class="text-sys-green">Advanced</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Layer 3: Protocols -->
+                    <div
+                        class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3"
+                    >
+                        <div
+                            class="flex items-center justify-between text-sys-green font-bold border-b border-sys-border pb-2"
+                        >
+                            <span>L3 :: PROTOCOLS &amp; NETWORKS</span>
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <ul class="space-y-2 text-sys-muted">
+                            <li class="flex justify-between">
+                                <span class="text-sys-text">MQTT</span>
+                                <span class="text-sys-green">Advanced</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-sys-text">Mesh Networks</span>
+                                <span class="text-sys-green">Advanced</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-sys-text">TCP/IP</span>
+                                <span class="text-sys-green">Advanced</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACADEMIC FORMATION -->
+            <section id="education" class="space-y-6">
+                <div class="border-b border-sys-border pb-4">
+                    <h2
+                        class="text-2xl font-bold text-white tracking-tight flex items-center gap-2"
+                    >
+                        <span class="text-sys-green font-mono text-lg"
+                            >&gt;</span
+                        >
+                        Academic Formation
+                    </h2>
+                    <p class="text-xs font-mono text-sys-muted mt-1">
+                        Theoretical foundation and engineering background
+                    </p>
+                </div>
+
+                <div
+                    class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-4"
+                >
+                    <div
+                        class="flex flex-wrap items-center justify-between gap-2 border-b border-sys-border pb-3"
+                    >
+                        <div>
+                            <h3 class="text-lg font-bold text-white">
+                                Computer Engineer
+                            </h3>
+                            <p class="text-xs font-mono text-sys-cyan">
+                                Universidad Nacional de Misiones (UNaM)
+                            </p>
+                        </div>
+                        <span
+                            class="text-xs font-mono text-sys-green bg-sys-green/10 border border-sys-green/30 px-2.5 py-1 rounded"
+                            >Completed</span
                         >
                     </div>
-                    <div>
-                        <p>
-                            <strong>Description:</strong> Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Placeholder for
-                            your project description detailing the overall scope
-                            and impact.
-                        </p>
-                        <ul>
-                            <li>
-                                <strong>Technical Challenge:</strong> Describe
-                                the complex problem that had to be solved (e.g.,
-                                latency, low-resource hardware, reliable
-                                messaging).
-                            </li>
-                            <li>
-                                <strong>Solution:</strong> Describe the
-                                architectural and software solution implemented
-                                to solve the challenge.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mt-15">
-                        <span class="tag">Skill 1</span>
-                        <span class="tag">Skill 2</span>
-                        <span class="tag">Skill 3</span>
-                    </div>
-                    <div class="diagram-box">
-                        <h4>System Architecture & Diagram Placeholder</h4>
-                        <p>
-                            [Insert system diagram, infrastructure design, or
-                            sequence flow here]
-                        </p>
+
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-bold text-sys-text uppercase">
+                            Relevant Courses &amp; Training
+                        </h4>
+                        <div
+                            class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs font-mono text-sys-muted"
+                        >
+                            <div
+                                class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text"
+                            >
+                                <i
+                                    class="fa-solid fa-check text-sys-green mr-1.5"
+                                ></i
+                                >[Course 1]
+                            </div>
+                            <div
+                                class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text"
+                            >
+                                <i
+                                    class="fa-solid fa-check text-sys-green mr-1.5"
+                                ></i
+                                >[Course 2]
+                            </div>
+                            <div
+                                class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text"
+                            >
+                                <i
+                                    class="fa-solid fa-check text-sys-green mr-1.5"
+                                ></i
+                                >[Course 3]
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <hr />
-
-            <!-- 03. Stack Section -->
-            <section id="stack">
-                <h2>Technologies Matrix & Stack</h2>
-                <p>
-                    Layered classification of my engineering and development
-                    stack.
-                </p>
-
-                <div class="grid-3 mt-25">
-                    <!-- L1 :: Backend Layer -->
-                    <div class="stack-card">
-                        <h4>L1 :: Backend</h4>
-                        <ul>
-                            <li>Python</li>
-                            <li>C / C++</li>
-                        </ul>
-                    </div>
-
-                    <!-- L2 :: Infrastructure Layer -->
-                    <div class="stack-card">
-                        <h4>L2 :: Infrastructure</h4>
-                        <ul>
-                            <li>Docker</li>
-                            <li>CI/CD</li>
-                            <li>Linux</li>
-                        </ul>
-                    </div>
-
-                    <!-- L3 :: Networking & Protocols -->
-                    <div class="stack-card">
-                        <h4>L3 :: Protocols & Networks</h4>
-                        <ul>
-                            <li>MQTT</li>
-                            <li>Mesh Networks</li>
-                            <li>TCP/IP</li>
-                        </ul>
-                    </div>
+            <!-- CONTACT -->
+            <section id="contact" class="space-y-6">
+                <div class="border-b border-sys-border pb-4">
+                    <h2
+                        class="text-2xl font-bold text-white tracking-tight flex items-center gap-2"
+                    >
+                        <span class="text-sys-green font-mono text-lg"
+                            >&gt;</span
+                        >
+                        Direct Contact
+                    </h2>
+                    <p class="text-xs font-mono text-sys-muted mt-1">
+                        Have a project or opportunity? Let's connect
+                    </p>
                 </div>
-            </section>
 
-            <hr />
+                <div class="w-full">
+                    <!-- Contact info channels -->
+                    <div
+                        class="bg-sys-card border border-sys-border rounded-xl p-6 space-y-4 font-mono text-xs"
+                    >
+                        <div
+                            class="text-sys-text font-bold text-sm border-b border-sys-border pb-2"
+                        >
+                            CONTACT INFORMATION
+                        </div>
 
-            <!-- 04. Education Section -->
-            <section id="education">
-                <h2>Academic Formation</h2>
-                <p>Theoretical foundation and engineering background.</p>
-
-                <div class="mt-25">
-                    <div>
-                        <h3>Computer Engineer</h3>
-                        <p class="subtitle">
-                            Universidad Nacional de Misiones (UNaM)
-                        </p>
-                        <p class="mt-10">
-                            <strong>Status:</strong> Certification in progress
-                        </p>
-                    </div>
-
-                    <div class="mt-30">
-                        <h4>Relevant Courses & Training</h4>
-                        <ul>
-                            <li>[Course / Certification Placeholder 1]</li>
-                            <li>[Course / Certification Placeholder 2]</li>
-                            <li>[Course / Certification Placeholder 3]</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <hr />
-
-            <!-- 05. Contact Section -->
-            <section id="contact">
-                <h2>Direct Contact</h2>
-                <p>Have a project or opportunity? Let's connect.</p>
-
-                <div class="grid-2 mt-30">
-                    <!-- Left Side: Info -->
-                    <div>
-                        <h3>Contact Information</h3>
-                        <p>
-                            Feel free to reach out via email or connect with me
-                            on professional platforms.
-                        </p>
-                        <ul class="contact-list">
-                            <li>
-                                <strong>Email:</strong>
-                                <a href="mailto:your.email@example.com"
-                                    >your.email@example.com</a
-                                >
-                            </li>
-                            <li>
-                                <strong>GitHub:</strong>
-                                <a
-                                    href="https://github.com/gabyds01"
-                                    target="_blank"
-                                    >github.com/gabyds01</a
-                                >
-                            </li>
-                            <li>
-                                <strong>LinkedIn:</strong>
-                                <a
-                                    href="https://linkedin.com/in/yourprofile"
-                                    target="_blank"
-                                    >linkedin.com/in/yourprofile</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Right Side: Contact Form -->
-                    <div>
-                        <form action="#" method="POST">
-                            <div class="form-group">
-                                <label for="name">Your name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    placeholder="John Doe"
-                                    required
-                                />
+                        <div
+                            class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-2"
+                        >
+                            <!-- Email (clickable / touchable) -->
+                            <div
+                                onclick="copyEmail()"
+                                class="flex items-center space-x-3 text-sys-muted cursor-pointer hover:bg-sys-hover/50 p-2 rounded transition-colors flex-1"
+                            >
+                                <span
+                                    class="p-2 bg-sys-bg rounded text-sys-cyan"
+                                    ><i class="fa-solid fa-envelope"></i
+                                ></span>
+                                <div>
+                                    <span
+                                        class="block text-[10px] text-sys-muted"
+                                        >EMAIL
+                                        <span
+                                            id="copy-email-status"
+                                            class="text-[9px] text-sys-green font-bold ml-1.5 hidden"
+                                            >Copied!</span
+                                        ></span
+                                    >
+                                    <span class="text-sys-text font-semibold"
+                                        >gabyingds01@gmail.com</span
+                                    >
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="john@example.com"
-                                    required
-                                />
+
+                            <!-- GitHub -->
+                            <div
+                                class="flex items-center space-x-3 text-sys-muted p-2 rounded flex-1"
+                            >
+                                <span
+                                    class="p-2 bg-sys-bg rounded text-sys-green"
+                                    ><i class="fa-brands fa-github"></i
+                                ></span>
+                                <div>
+                                    <span
+                                        class="block text-[10px] text-sys-muted"
+                                        >GITHUB</span
+                                    >
+                                    <a
+                                        href="https://github.com/gabyds01"
+                                        target="_blank"
+                                        rel="noopener"
+                                        class="text-sys-text hover:text-sys-cyan font-semibold"
+                                        >github.com/gabyds01</a
+                                    >
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="issue">Issue</label>
-                                <input
-                                    type="text"
-                                    id="issue"
-                                    name="issue"
-                                    placeholder="Job opportunity, project collab..."
-                                    required
-                                />
+
+                            <!-- LinkedIn -->
+                            <div
+                                class="flex items-center space-x-3 text-sys-muted p-2 rounded flex-1"
+                            >
+                                <span
+                                    class="p-2 bg-sys-bg rounded text-sys-purple"
+                                    ><i class="fa-brands fa-linkedin"></i
+                                ></span>
+                                <div>
+                                    <span
+                                        class="block text-[10px] text-sys-muted"
+                                        >LINKEDIN</span
+                                    >
+                                    <a
+                                        href="https://linkedin.com/in/dsch-gabriel"
+                                        target="_blank"
+                                        rel="noopener"
+                                        class="text-sys-text hover:text-sys-cyan font-semibold"
+                                        >linkedin.com/in/dsch-gabriel</a
+                                    >
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    placeholder="Type your message here..."
-                                    required
-                                ></textarea>
-                            </div>
-                            <button type="submit">Send</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Gabriel Da Silva. All rights reserved.</p>
-            <p>
-                <a href="https://github.com/gabyds01" target="_blank">GitHub</a>
-                |
-                <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                    >LinkedIn</a
-                >
-            </p>
+        <!-- FOOTER -->
+        <footer
+            class="border-t border-sys-border bg-sys-card px-4 py-6 text-xs font-mono text-sys-muted mt-16"
+        >
+            <div
+                class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4"
+            >
+                <div>
+                    <p>&copy; 2026 Gabriel Da Silva. All rights reserved.</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a
+                        href="https://github.com/gabyds01"
+                        target="_blank"
+                        rel="noopener"
+                        class="hover:text-sys-cyan"
+                        >GitHub</a
+                    >
+                    <span>•</span>
+                    <a
+                        href="https://linkedin.com/in/dsch-gabriel"
+                        target="_blank"
+                        rel="noopener"
+                        class="hover:text-sys-cyan"
+                        >LinkedIn</a
+                    >
+                </div>
+            </div>
         </footer>
     </body>
 </html>
