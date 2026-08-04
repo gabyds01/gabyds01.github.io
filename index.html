@@ -385,6 +385,197 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- PROJECT CARD 2 -->
+                    <div
+                        class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-6 hover:border-sys-muted/50 transition-colors"
+                    >
+                        <div
+                            class="flex flex-wrap items-center justify-between gap-3 border-b border-sys-border pb-4"
+                        >
+                            <div>
+                                <div
+                                    class="flex items-center space-x-2 text-xs font-mono text-sys-cyan mb-1"
+                                >
+                                    <span
+                                        >ROBOTICS • CONTROL THEORY &amp;
+                                        SCIENTIFIC PYTHON</span
+                                    >
+                                </div>
+                                <h3 class="text-xl font-bold text-white">
+                                    VSSS PC Control System
+                                </h3>
+                            </div>
+                            <div
+                                class="flex flex-wrap items-center gap-2 font-mono text-xs"
+                            >
+                                <a
+                                    href="https://github.com/gabyds01/vsss-pc"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors"
+                                >
+                                    <i
+                                        class="fa-brands fa-github text-[12px]"
+                                    ></i>
+                                    <span>Repository</span>
+                                </a>
+                                <span
+                                    class="bg-sys-hover/50 text-sys-muted border border-sys-border px-2.5 py-1 rounded-md flex items-center gap-1.5"
+                                >
+                                    <i
+                                        class="fa-solid fa-hourglass-half text-[10px] mr-1"
+                                    ></i>
+                                    Standby / Core Dev
+                                </span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
+                        >
+                            <!-- Description & Details -->
+                            <div class="lg:col-span-5 space-y-4">
+                                <p
+                                    class="text-sm text-sys-muted leading-relaxed"
+                                >
+                                    <strong>Description:</strong> Engineered the
+                                    core design and initial codebase of the
+                                    PC-side real-time control loop for
+                                    <strong
+                                        >Very Small Size Soccer (VSSS)</strong
+                                    >
+                                    autonomous robots. Translates raw vision
+                                    sensor telemetry into precise wheel
+                                    velocities in closed-loop systems. This work
+                                    serves as the foundation for a co-authored
+                                    scientific robotics paper.
+                                </p>
+
+                                <div
+                                    class="space-y-2 text-xs font-mono text-sys-text"
+                                >
+                                    <div class="flex items-start space-x-2">
+                                        <i
+                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
+                                        ></i>
+                                        <span
+                                            ><strong
+                                                >Technical Challenge:</strong
+                                            >
+                                            Implementing highly reliable
+                                            closed-loop trajectory tracking
+                                            (unicycle kinematic conversion to
+                                            differential drive wheel speeds)
+                                            under microsecond-level timing
+                                            constraints on standard PCs over
+                                            unstable wireless interfaces.</span
+                                        >
+                                    </div>
+                                    <div class="flex items-start space-x-2">
+                                        <i
+                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
+                                        ></i>
+                                        <span
+                                            ><strong>Solution:</strong>
+                                            Implemented a modular Python package
+                                            with
+                                            <strong>LQR tracking</strong>
+                                            (Kanayama error projection, wall
+                                            gain-scheduling) and
+                                            <strong>Pure Pursuit</strong>
+                                            controllers. Built
+                                            curvature-adaptive speed
+                                            controllers, parametric
+                                            spline/S-curve path generators,
+                                            asynchronous
+                                            <strong>Protobuf UDP</strong> vision
+                                            deserialization, ESP32 USB-serial
+                                            bridge packaging with
+                                            <strong>CRC-8</strong>, and live
+                                            telemetry profiling tools.</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Skills Tags -->
+                                <div
+                                    class="pt-2 flex flex-wrap gap-2 text-xs font-mono"
+                                >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
+                                        >Theory of Control</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
+                                        >LQR / Pure Pursuit</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
+                                        >Kinematics Model</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
+                                        >Python / uv</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
+                                        >Protobuf / UDP</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
+                                        >Matplotlib / Numpy</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
+                                        >ESP-NOW / Serial</span
+                                    >
+                                    <span
+                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
+                                        >Scientific Computing</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- System Architecture -->
+                            <div
+                                class="lg:col-span-7 bg-sys-bg border border-sys-border rounded-lg p-4 font-mono text-xs"
+                            >
+                                <div
+                                    class="text-xs text-sys-muted border-b border-sys-border pb-2 mb-3 flex justify-between"
+                                >
+                                    <span>SYSTEM ARCHITECTURE &amp; FLOW</span>
+                                    <i
+                                        class="fa-solid fa-diagram-project text-sys-cyan"
+                                    ></i>
+                                </div>
+
+                                <!-- prettier-ignore -->
+                                <div class="text-[11px] sm:text-xs leading-relaxed text-sys-muted overflow-x-auto whitespace-pre p-2">
+   <span class="text-sys-cyan">┌─────────────────────────────────┐</span>
+   <span class="text-sys-cyan">│      Vision / FIRASim (UDP)     │</span>
+   <span class="text-sys-cyan">└─────────────────────────────────┘</span>
+                    │
+                    │ <span class="text-sys-green">Protobuf State Multicast</span>
+                    ▼
+   <span class="text-sys-text">┌─────────────────────────────────┐</span>      <span class="text-sys-cyan">┌──────────────┐</span>
+   <span class="text-sys-text">│     PC Control Loop (Python)    │</span> <span class="text-sys-green">◄──►</span> <span class="text-sys-cyan">│ Trajectory   │</span>
+   <span class="text-sys-text">└─────────────────────────────────┘</span>      <span class="text-sys-cyan">│ LQR / Pursuit│</span>
+            │               │               <span class="text-sys-cyan">└──────────────┘</span>
+            ▼ Simulation    ▼ Hardware (USB Serial with CRC-8)
+   <span class="text-sys-purple">┌──────────────┐</span> <span class="text-sys-green">┌──────────────┐</span>
+   <span class="text-sys-purple">│ FIRASim UDP  │</span> <span class="text-sys-green">│ ESP32 Bridge │</span>
+   <span class="text-sys-purple">└──────────────┘</span> <span class="text-sys-green">└──────────────┘</span>
+                            │
+                            │ <span class="text-sys-green">ESP-NOW Protocol</span>
+                            ▼
+                    <span class="text-sys-text">┌──────────────┐</span>
+                    <span class="text-sys-text">│ VSSS Robots  │</span>
+                    <span class="text-sys-text">└──────────────┘</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
