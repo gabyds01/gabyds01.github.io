@@ -80,6 +80,35 @@ body {
     color: var(--sys-cyan);
 }
 
+/* Smooth scrolling (independent of Tailwind CDN timing) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus-visible for keyboard navigation (accessibility) */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--sys-cyan);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Mobile nav slide-down animation */
+#mobile-nav {
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Selection highlights */
 ::selection {
     background-color: var(--sys-cyan);

@@ -1,360 +1,280 @@
 <!doctype html>
 <html lang="en" class="dark scroll-smooth">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Gabriel Da Silva | Backend & DevOps Portfolio</title>
 
-        <!-- External stylesheet & combined script -->
-        <link rel="stylesheet" href="style.css" />
-        <script src="script.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Da Silva | Backend & DevOps Portfolio</title>
+    <meta name="description"
+        content="Computer Engineer from UNaM specializing in Backend Development, DevOps, IoT, and AI. Portfolio featuring containerized cloud architectures, mesh IoT networks, and real-time computer vision systems." />
 
-        <!-- Tailwind CSS & FontAwesome -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-    </head>
-    <body
-        class="dot-matrix min-h-screen flex flex-col justify-between antialiased selection:bg-sys-cyan selection:text-sys-bg"
-    >
-        <!-- HEADER -->
-        <header
-            class="sticky top-0 z-50 bg-[#0d1117]/90 backdrop-blur-md border-b border-sys-border"
-        >
-            <div
-                class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between"
-            >
-                <!-- Logo / Terminal Ident -->
-                <a
-                    href="#"
-                    class="flex items-center space-x-2 font-mono text-sm font-semibold hover:text-sys-cyan transition-colors"
-                >
-                    <span class="text-sys-green font-bold">&gt;</span>
-                    <span class="text-sys-text">dev</span
-                    ><span class="text-sys-muted">@</span
-                    ><span class="text-sys-cyan">gabriel-dasilva</span>
-                    <span
-                        class="animate-pulse inline-block w-2 h-4 bg-sys-green ml-1"
-                    ></span>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gabriel Da Silva | Backend & DevOps Portfolio" />
+    <meta property="og:description" content="Computer Engineer specializing in Backend, DevOps, IoT and AI systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gabyds01.github.io" />
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+    <!-- Tailwind CSS (must load before config in script.js) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+
+    <!-- Stylesheet & fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body
+    class="dot-matrix min-h-screen flex flex-col justify-between antialiased selection:bg-sys-cyan selection:text-sys-bg">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-[#0d1117]/90 backdrop-blur-md border-b border-sys-border">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+            <!-- Logo / Terminal Ident -->
+            <a href="#"
+                class="flex items-center space-x-2 font-mono text-sm font-semibold hover:text-sys-cyan transition-colors">
+                <span class="text-sys-green font-bold">&gt;</span>
+                <span class="text-sys-text">dev</span><span class="text-sys-muted">@</span><span
+                    class="text-sys-cyan">gabriel-dasilva</span>
+                <span class="animate-pulse inline-block w-2 h-4 bg-sys-green ml-1"></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-mono text-sys-muted">
+                <a href="#about" class="hover:text-sys-cyan transition-colors flex items-center gap-1">
+                    <span class="text-sys-green">01.</span> /about-me
                 </a>
+                <a href="#projects" class="hover:text-sys-cyan transition-colors flex items-center gap-1">
+                    <span class="text-sys-green">02.</span> /projects
+                </a>
+                <a href="#stack" class="hover:text-sys-cyan transition-colors flex items-center gap-1">
+                    <span class="text-sys-green">03.</span> /stack
+                </a>
+                <a href="#education" class="hover:text-sys-cyan transition-colors flex items-center gap-1">
+                    <span class="text-sys-green">04.</span> /education
+                </a>
+                <a href="#contact" class="hover:text-sys-cyan transition-colors flex items-center gap-1">
+                    <span class="text-sys-green">05.</span> /contact
+                </a>
+            </nav>
 
-                <!-- Navigation Links -->
-                <nav
-                    class="hidden md:flex items-center space-x-8 text-xs font-mono text-sys-muted"
-                >
-                    <a
-                        href="#about"
-                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
-                    >
-                        <span class="text-sys-green">01.</span> /about-me
-                    </a>
-                    <a
-                        href="#projects"
-                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
-                    >
-                        <span class="text-sys-green">02.</span> /projects
-                    </a>
-                    <a
-                        href="#stack"
-                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
-                    >
-                        <span class="text-sys-green">03.</span> /stack
-                    </a>
-                    <a
-                        href="#education"
-                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
-                    >
-                        <span class="text-sys-green">04.</span> /education
-                    </a>
-                    <a
-                        href="#contact"
-                        class="hover:text-sys-cyan transition-colors flex items-center gap-1"
-                    >
-                        <span class="text-sys-green">05.</span> /contact
-                    </a>
-                </nav>
-
-                <!-- Actions CTA -->
-                <div class="flex items-center space-x-3 md:hidden">
-                    <a
-                        href="#contact"
-                        class="md:hidden text-sys-muted hover:text-white p-1"
-                    >
-                        <i class="fa-solid fa-bars text-lg"></i>
-                    </a>
-                </div>
+            <!-- Actions CTA -->
+            <div class="flex items-center space-x-3 md:hidden">
+                <button onclick="toggleMobileMenu()" class="md:hidden text-sys-muted hover:text-white p-1"
+                    aria-label="Toggle navigation menu">
+                    <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
+                </button>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <main
-            class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-20 w-full flex-1"
-        >
-            <!-- HERO / ABOUT SECTION -->
-            <section id="about" class="pt-4 space-y-6">
-                <div
-                    class="inline-flex items-center space-x-2 text-xs font-mono bg-sys-card border border-sys-border px-3 py-1.5 rounded-full text-sys-muted"
-                >
-                    <span
-                        class="inline-block w-2 h-2 rounded-full bg-sys-green"
-                        style="
-                            width: 8px;
-                            height: 8px;
-                            min-width: 8px;
-                            min-height: 8px;
-                            border-radius: 50%;
-                            background-color: var(--sys-green);
-                        "
-                    ></span>
-                    <span>Computer Engineer — UNaM</span>
-                </div>
+    <!-- Mobile Navigation Panel -->
+    <nav id="mobile-nav"
+        class="hidden md:hidden sticky top-[53px] z-40 bg-[#0d1117]/95 backdrop-blur-md border-b border-sys-border">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col space-y-1 text-xs font-mono text-sys-muted">
+            <a href="#about" onclick="toggleMobileMenu()"
+                class="hover:text-sys-cyan transition-colors flex items-center gap-2 py-2.5 border-b border-sys-border/50">
+                <span class="text-sys-green">01.</span> /about-me
+            </a>
+            <a href="#projects" onclick="toggleMobileMenu()"
+                class="hover:text-sys-cyan transition-colors flex items-center gap-2 py-2.5 border-b border-sys-border/50">
+                <span class="text-sys-green">02.</span> /projects
+            </a>
+            <a href="#stack" onclick="toggleMobileMenu()"
+                class="hover:text-sys-cyan transition-colors flex items-center gap-2 py-2.5 border-b border-sys-border/50">
+                <span class="text-sys-green">03.</span> /stack
+            </a>
+            <a href="#education" onclick="toggleMobileMenu()"
+                class="hover:text-sys-cyan transition-colors flex items-center gap-2 py-2.5 border-b border-sys-border/50">
+                <span class="text-sys-green">04.</span> /education
+            </a>
+            <a href="#contact" onclick="toggleMobileMenu()"
+                class="hover:text-sys-cyan transition-colors flex items-center gap-2 py-2.5">
+                <span class="text-sys-green">05.</span> /contact
+            </a>
+        </div>
+    </nav>
 
-                <div class="space-y-4 max-w-3xl">
-                    <h1
-                        class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight"
-                    >
-                        <span class="text-sys-cyan">Backend Developer</span>
-                        and
-                        <span class="text-sys-green">DevOps</span>
-                    </h1>
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-20 w-full flex-1">
+        <!-- HERO / ABOUT SECTION -->
+        <section id="about" class="pt-4 space-y-6">
+            <div
+                class="inline-flex items-center space-x-2 text-xs font-mono bg-sys-card border border-sys-border px-3 py-1.5 rounded-full text-sys-muted">
+                <span class="inline-block w-2 h-2 rounded-full bg-sys-green shrink-0"></span>
+                <span>Computer Engineer — UNaM</span>
+            </div>
 
-                    <p
-                        class="text-sys-muted text-base sm:text-lg leading-relaxed"
-                    >
-                        I am a Computer Engineer graduated from the Universidad
-                        Nacional de Misiones (UNaM), specializing in Backend
-                        Development, DevOps, and Embedded Systems. I design
-                        robust containerized cloud architectures, integrate
-                        real-time computer vision models, and build self-healing
-                        IoT networks to solve complex ecological and technical
-                        challenges.
+            <div class="space-y-4 max-w-3xl">
+                <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+                    <span class="text-sys-cyan">Backend Developer</span>
+                    and
+                    <span class="text-sys-green">DevOps</span>
+                </h1>
+
+                <p class="text-sys-muted text-base sm:text-lg leading-relaxed">
+                    I am a Computer Engineer graduated from the Universidad
+                    Nacional de Misiones (UNaM), specializing in Backend
+                    Development, DevOps, and Embedded Systems. I design
+                    robust containerized architectures, integrate
+                    real-time computer vision models, and build self-healing
+                    IoT networks to solve complex ecological and technical
+                    challenges.
+                </p>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="projects" class="space-y-8">
+            <div class="border-b border-sys-border pb-4 flex items-end justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+                        <span class="text-sys-green font-mono text-lg">&gt;</span>
+                        Projects
+                    </h2>
+                    <p class="text-xs font-mono text-sys-muted mt-1">
+                        Engineering cases, software architecture, and
+                        infrastructure
                     </p>
                 </div>
-            </section>
+                <span class="text-xs font-mono text-sys-muted hidden sm:inline-block">[Project Case Study]</span>
+            </div>
 
-            <!-- PROYECTOS -->
-            <section id="projects" class="space-y-8">
+            <div class="space-y-8">
+                <!-- PROJECT CARD 1: Thesis -->
                 <div
-                    class="border-b border-sys-border pb-4 flex items-end justify-between"
-                >
-                    <div>
-                        <h2
-                            class="text-2xl font-bold text-white tracking-tight flex items-center gap-2"
-                        >
-                            <span class="text-sys-green font-mono text-lg"
-                                >&gt;</span
-                            >
-                            Projects
-                        </h2>
-                        <p class="text-xs font-mono text-sys-muted mt-1">
-                            Engineering cases, software architecture, and
-                            infrastructure
-                        </p>
-                    </div>
-                    <span
-                        class="text-xs font-mono text-sys-muted hidden sm:inline-block"
-                        >[Project Case Study]</span
-                    >
-                </div>
-
-                <div class="space-y-8">
-                    <!-- PROJECT CARD -->
-                    <div
-                        class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-6 hover:border-sys-muted/50 transition-colors"
-                    >
-                        <div
-                            class="flex flex-wrap items-center justify-between gap-3 border-b border-sys-border pb-4"
-                        >
-                            <div>
-                                <div
-                                    class="flex items-center space-x-2 text-xs font-mono text-sys-cyan mb-1"
-                                >
-                                    <span
-                                        >THESIS PROJECT • IoT, AI &amp; CLOUD
-                                        ARCHITECTURE</span
-                                    >
-                                </div>
-                                <h3 class="text-xl font-bold text-white">
-                                    AI-Based Monitoring &amp; Early Warning
-                                    System for Protected Areas
-                                </h3>
+                    class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-6 hover:border-sys-muted/50 transition-colors">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-sys-border pb-4">
+                        <div>
+                            <div class="flex items-center space-x-2 text-xs font-mono text-sys-cyan mb-1">
+                                <span>THESIS PROJECT • IoT, AI &amp; CLOUD
+                                    ARCHITECTURE</span>
                             </div>
-                            <div
-                                class="flex flex-wrap items-center gap-2 font-mono text-xs"
-                            >
-                                <a
-                                    href="https://github.com/gabyds01/bachelor-thesis"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors"
-                                >
-                                    <i
-                                        class="fa-brands fa-github text-[12px]"
-                                    ></i>
-                                    <span>Thesis</span>
-                                </a>
-                                <a
-                                    href="https://github.com/gabyds01/trapcam_mesh"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors"
-                                >
-                                    <i
-                                        class="fa-brands fa-github text-[12px]"
-                                    ></i>
-                                    <span>Firmware</span>
-                                </a>
-                                <a
-                                    href="https://github.com/gabyds01/server-capstone-project"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors"
-                                >
-                                    <i
-                                        class="fa-brands fa-github text-[12px]"
-                                    ></i>
-                                    <span>Backend</span>
-                                </a>
+                            <h3 class="text-xl font-bold text-white">
+                                AI-Based Monitoring &amp; Early Warning
+                                System for Protected Areas
+                            </h3>
+                            <span class="text-[10px] font-mono text-sys-muted">Co-authored with Fabrizio Contigiani •
+                                Advisor: Dr. Ing. Sergio Moya</span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+                            <a href="https://github.com/gabyds01/bachelor-thesis" target="_blank"
+                                rel="noopener noreferrer"
+                                class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github text-[12px]"></i>
+                                <span>Thesis</span>
+                            </a>
+                            <a href="https://github.com/gabyds01/trapcam_mesh" target="_blank" rel="noopener noreferrer"
+                                class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github text-[12px]"></i>
+                                <span>Firmware</span>
+                            </a>
+                            <a href="https://github.com/gabyds01/server-capstone-project" target="_blank"
+                                rel="noopener noreferrer"
+                                class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github text-[12px]"></i>
+                                <span>Backend</span>
+                            </a>
+                            <span
+                                class="bg-sys-green/10 text-sys-green border border-sys-green/30 px-2.5 py-1 rounded-md">
+                                <i class="fa-solid fa-circle-check text-[10px] mr-1"></i>
+                                Completed
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <!-- Description & Details -->
+                        <div class="lg:col-span-5 space-y-4">
+                            <p class="text-sm text-sys-muted leading-relaxed">
+                                <strong>Description:</strong> Co-designed and
+                                implemented an automated monitoring and
+                                early warning system for the
+                                <strong>Misiones Rainforest (Selva
+                                    Misionera)</strong>. The system combines low-power Internet of
+                                Things (IoT) camera networks with
+                                server-side Artificial Intelligence (AI) to
+                                automatically detect, classify, and report
+                                wildlife species, humans, and unauthorized
+                                vehicles in real time.
+                            </p>
+
+                            <div class="space-y-2 text-xs font-mono text-sys-text">
+                                <div class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-chevron-right text-sys-green mt-0.5"></i>
+                                    <span><strong>Technical Challenge:</strong>
+                                        Overcoming the limitations of
+                                        traditional camera traps to work
+                                        without cellular network access or
+                                        heavy battery setups in remote
+                                        rainforest environments, while
+                                        eliminating the delay and effort of
+                                        manual memory card collection and
+                                        manual image review.</span>
+                                </div>
+                                <div class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-chevron-right text-sys-green mt-0.5"></i>
+                                    <span><strong>Solution:</strong> Deployed
+                                        ESP32-CAM nodes forming a
+                                        self-healing 2.4GHz
+                                        <strong>ESP-MESH-LITE</strong>
+                                        network that routes images to a Root
+                                        Gateway node. Built a containerized
+                                        cloud backend via
+                                        <strong>Docker</strong> featuring a
+                                        <strong>Django</strong> control
+                                        panel, a
+                                        <strong>PostgreSQL</strong>
+                                        database, a
+                                        <strong>SpeciesNet</strong>
+                                        (Google's
+                                        <strong>YOLOv5</strong>-based wildlife classifier) AI
+                                        inference service for automated
+                                        classification, and a
+                                        <strong>Telegram Bot</strong> that
+                                        delivers real-time notifications to
+                                        forest rangers.</span>
+                                </div>
+                            </div>
+
+                            <!-- Skills Tags -->
+                            <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono">
+                                <span class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">IoT /
+                                    ESP32</span>
                                 <span
-                                    class="bg-sys-green/10 text-sys-green border border-sys-green/30 px-2.5 py-1 rounded-md"
-                                >
-                                    <i
-                                        class="fa-solid fa-circle-check text-[10px] mr-1"
-                                    ></i>
-                                    Completed
-                                </span>
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">ESP-MESH-LITE</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">YOLOv5
+                                    / SpeciesNet</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">Django
+                                    / Python</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">Docker</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">PostgreSQL</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green">Telegram
+                                    API</span>
+                                <span class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green">C /
+                                    C++</span>
                             </div>
                         </div>
 
-                        <div
-                            class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
-                        >
-                            <!-- Description & Details -->
-                            <div class="lg:col-span-5 space-y-4">
-                                <p
-                                    class="text-sm text-sys-muted leading-relaxed"
-                                >
-                                    <strong>Description:</strong> Designed and
-                                    implemented an automated monitoring and
-                                    early warning system for the
-                                    <strong
-                                        >Misiones Rainforest (Selva
-                                        Misionera)</strong
-                                    >. The system combines low-power Internet of
-                                    Things (IoT) camera networks with
-                                    server-side Artificial Intelligence (AI) to
-                                    automatically detect, classify, and report
-                                    wildlife species, humans, and unauthorized
-                                    vehicles in real time.
-                                </p>
-
-                                <div
-                                    class="space-y-2 text-xs font-mono text-sys-text"
-                                >
-                                    <div class="flex items-start space-x-2">
-                                        <i
-                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
-                                        ></i>
-                                        <span
-                                            ><strong
-                                                >Technical Challenge:</strong
-                                            >
-                                            Overcoming the limitations of
-                                            traditional camera traps to work
-                                            without cellular network access or
-                                            heavy battery setups in remote
-                                            rainforest environments, while
-                                            eliminating the delay and effort of
-                                            manual memory card collection and
-                                            manual image review.</span
-                                        >
-                                    </div>
-                                    <div class="flex items-start space-x-2">
-                                        <i
-                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
-                                        ></i>
-                                        <span
-                                            ><strong>Solution:</strong> Deployed
-                                            ESP32-CAM nodes forming a
-                                            self-healing 2.4GHz
-                                            <strong>ESP-MESH-LITE</strong>
-                                            network that routes images to a Root
-                                            Gateway node. Built a containerized
-                                            cloud backend via
-                                            <strong>Docker</strong> featuring a
-                                            <strong>Django</strong> control
-                                            panel, a
-                                            <strong>PostgreSQL</strong>
-                                            database, a
-                                            <strong>SpeciesNet</strong>
-                                            (Google-backed
-                                            <strong>YOLOv5</strong>) AI
-                                            inference service for automated
-                                            classification, and a
-                                            <strong>Telegram Bot</strong> that
-                                            delivers real-time notifications to
-                                            forest rangers.</span
-                                        >
-                                    </div>
-                                </div>
-
-                                <!-- Skills Tags -->
-                                <div
-                                    class="pt-2 flex flex-wrap gap-2 text-xs font-mono"
-                                >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >IoT / ESP32</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >ESP-MESH-LITE</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >YOLOv5 / SpeciesNet</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >Django / Python</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >Docker</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >PostgreSQL</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
-                                        >Telegram API</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
-                                        >C / C++</span
-                                    >
-                                </div>
+                        <!-- System Architecture -->
+                        <div class="lg:col-span-7 bg-sys-bg border border-sys-border rounded-lg p-4 font-mono text-xs">
+                            <div
+                                class="text-xs text-sys-muted border-b border-sys-border pb-2 mb-3 flex justify-between">
+                                <span>SYSTEM ARCHITECTURE &amp; FLOW</span>
+                                <i class="fa-solid fa-diagram-project text-sys-cyan"></i>
                             </div>
 
-                            <!-- System Architecture -->
-                            <div
-                                class="lg:col-span-7 bg-sys-bg border border-sys-border rounded-lg p-4 font-mono text-xs"
-                            >
-                                <div
-                                    class="text-xs text-sys-muted border-b border-sys-border pb-2 mb-3 flex justify-between"
-                                >
-                                    <span>SYSTEM ARCHITECTURE &amp; FLOW</span>
-                                    <i
-                                        class="fa-solid fa-diagram-project text-sys-cyan"
-                                    ></i>
-                                </div>
-
-                                <!-- prettier-ignore -->
-                                <div class="text-[11px] sm:text-xs leading-relaxed text-sys-muted overflow-x-auto whitespace-pre p-2">
+                            <!-- prettier-ignore -->
+                            <pre
+                                class="font-mono text-[11px] sm:text-xs leading-relaxed text-sys-muted overflow-x-auto p-2">
    <span class="text-sys-cyan">┌─────────────────────────────────┐</span>
    <span class="text-sys-cyan">│      ESP32-CAM Mesh Nodes       │</span>
    <span class="text-sys-cyan">└─────────────────────────────────┘</span>
@@ -380,364 +300,273 @@
             ▼
    <span class="text-sys-text">┌─────────────────────────────────┐</span>
    <span class="text-sys-text">│        Rangers &amp; Guards         │</span>
-   <span class="text-sys-text">└─────────────────────────────────┘</span>
-                                </div>
+   <span class="text-sys-text">└─────────────────────────────────┘</span></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT CARD 2: GaritaSystem -->
+                <div
+                    class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-6 hover:border-sys-muted/50 transition-colors">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-sys-border pb-4">
+                        <div>
+                            <div class="flex items-center space-x-2 text-xs font-mono text-sys-cyan mb-1">
+                                <span>PROFESSIONAL PRACTICE • DESKTOP &amp;
+                                    BACKEND SYSTEMS</span>
                             </div>
+                            <h3 class="text-xl font-bold text-white">
+                                GaritaSystem (Martin Bauer Argentina)
+                            </h3>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+                            <span
+                                class="bg-sys-hover border border-sys-border text-sys-muted px-2.5 py-1 rounded-md flex items-center gap-1.5 cursor-not-allowed select-none"
+                                title="Code is proprietary and closed-source">
+                                <i class="fa-solid fa-lock text-[11px]"></i>
+                                <span>Proprietary</span>
+                            </span>
+                            <span
+                                class="bg-sys-green/10 text-sys-green border border-sys-green/30 px-2.5 py-1 rounded-md">
+                                <i class="fa-solid fa-circle-check text-[10px] mr-1"></i>
+                                Completed
+                            </span>
                         </div>
                     </div>
 
-                    <!-- PROJECT CARD 3 -->
-                    <div
-                        class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-6 hover:border-sys-muted/50 transition-colors"
-                    >
-                        <div
-                            class="flex flex-wrap items-center justify-between gap-3 border-b border-sys-border pb-4"
-                        >
-                            <div>
-                                <div
-                                    class="flex items-center space-x-2 text-xs font-mono text-sys-cyan mb-1"
-                                >
-                                    <span
-                                        >PROFESSIONAL PRACTICE • DESKTOP &amp;
-                                        BACKEND SYSTEMS</span
-                                    >
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <!-- Description & Details -->
+                        <div class="lg:col-span-5 space-y-4">
+                            <p class="text-sm text-sys-muted leading-relaxed">
+                                <strong>Description:</strong> Designed and
+                                developed critical production modules for
+                                "GaritaSystem", an enterprise weighing and
+                                truck cargo registration system implemented
+                                at <strong>Martin Bauer Argentina</strong>.
+                                Designed a multi-workstation client-server
+                                architecture including desktop PySide6
+                                clients, containerized Django REST services,
+                                and seamless integration with the Softland
+                                ERP system.
+                            </p>
+
+                            <div class="space-y-2 text-xs font-mono text-sys-text">
+                                <div class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-chevron-right text-sys-green mt-0.5"></i>
+                                    <span><strong>Technical Challenge:</strong>
+                                        Completing the operational cycle by
+                                        creating secure,
+                                        constraint-validated edit mechanics
+                                        for active load processes while
+                                        preventing any modifications to
+                                        finalized weighing records, and
+                                        dynamically rendering high-fidelity
+                                        printer-ready PDF tickets with zero
+                                        performance latency on remote local
+                                        terminals.</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-white">
-                                    GaritaSystem (Martin Bauer Argentina)
-                                </h3>
+                                <div class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-chevron-right text-sys-green mt-0.5"></i>
+                                    <span><strong>Solution:</strong>
+                                        Programmed secure PySide6 GUI edit
+                                        dialogs that load pending weighing
+                                        records. Created a Django REST API
+                                        endpoint (`/api/generate-ticket/`)
+                                        that queries PostgreSQL and
+                                        dynamically generates formatted
+                                        weighing tickets with
+                                        <strong>WeasyPrint</strong>.
+                                        Implemented automated silent
+                                        printing on the client side using
+                                        native OS printer spooling pipelines
+                                        in Qt, integrated with the corporate
+                                        <strong>Softland ERP</strong>.</span>
+                                </div>
                             </div>
-                            <div
-                                class="flex flex-wrap items-center gap-2 font-mono text-xs"
-                            >
+
+                            <!-- Skills Tags -->
+                            <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono">
                                 <span
-                                    class="bg-sys-hover border border-sys-border text-sys-muted px-2.5 py-1 rounded-md flex items-center gap-1.5 cursor-not-allowed select-none"
-                                    title="Code is proprietary and closed-source"
-                                >
-                                    <i class="fa-solid fa-lock text-[11px]"></i>
-                                    <span>Proprietary</span>
-                                </span>
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">PySide6
+                                    / Qt</span>
                                 <span
-                                    class="bg-sys-green/10 text-sys-green border border-sys-green/30 px-2.5 py-1 rounded-md"
-                                >
-                                    <i
-                                        class="fa-solid fa-circle-check text-[10px] mr-1"
-                                    ></i>
-                                    Completed
-                                </span>
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">Django
+                                    REST Framework</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">WeasyPrint
+                                    PDF</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">PostgreSQL</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">Softland
+                                    ERP</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">Docker</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green">Network
+                                    Printing</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green">System
+                                    Integration</span>
                             </div>
                         </div>
 
-                        <div
-                            class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
-                        >
-                            <!-- Description & Details -->
-                            <div class="lg:col-span-5 space-y-4">
-                                <p
-                                    class="text-sm text-sys-muted leading-relaxed"
-                                >
-                                    <strong>Description:</strong> Designed and
-                                    developed critical production modules for
-                                    "GaritaSystem", an enterprise weighing and
-                                    truck cargo registration system implemented
-                                    at <strong>Martin Bauer Argentina</strong>.
-                                    Designed a multi-workstation client-server
-                                    architecture including desktop PySide6
-                                    clients, containerized Django REST services,
-                                    and seamless integration with the Softland
-                                    ERP system.
-                                </p>
-
-                                <div
-                                    class="space-y-2 text-xs font-mono text-sys-text"
-                                >
-                                    <div class="flex items-start space-x-2">
-                                        <i
-                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
-                                        ></i>
-                                        <span
-                                            ><strong
-                                                >Technical Challenge:</strong
-                                            >
-                                            Completing the operational cycle by
-                                            creating secure,
-                                            constraint-validated edit mechanics
-                                            for active load processes while
-                                            preventing any modifications to
-                                            finalized weighing records, and
-                                            dynamically rendering high-fidelity
-                                            printer-ready PDF tickets with zero
-                                            performance latency on remote local
-                                            terminals.</span
-                                        >
-                                    </div>
-                                    <div class="flex items-start space-x-2">
-                                        <i
-                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
-                                        ></i>
-                                        <span
-                                            ><strong>Solution:</strong>
-                                            Programmed secure PySide6 GUI edit
-                                            dialogs that load pending weighing
-                                            records. Created a Django REST API
-                                            endpoint (`/api/generate-ticket/`)
-                                            that queries PostgreSQL and
-                                            dynamically generates formatted
-                                            weighing tickets with
-                                            <strong>WeasyPrint</strong>.
-                                            Implemented automated silent
-                                            printing on the client side using
-                                            native OS printer spooling pipelines
-                                            in Qt, integrated with the corporate
-                                            <strong>Softland ERP</strong>.</span
-                                        >
-                                    </div>
-                                </div>
-
-                                <!-- Skills Tags -->
-                                <div
-                                    class="pt-2 flex flex-wrap gap-2 text-xs font-mono"
-                                >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >PySide6 / Qt</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >Django REST Framework</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >WeasyPrint PDF</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >PostgreSQL</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >Softland ERP</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >Docker</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
-                                        >Network Printing</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
-                                        >System Integration</span
-                                    >
-                                </div>
-                            </div>
-
-                            <!-- System Architecture -->
+                        <!-- System Architecture -->
+                        <div class="lg:col-span-7 bg-sys-bg border border-sys-border rounded-lg p-4 font-mono text-xs">
                             <div
-                                class="lg:col-span-7 bg-sys-bg border border-sys-border rounded-lg p-4 font-mono text-xs"
-                            >
-                                <div
-                                    class="text-xs text-sys-muted border-b border-sys-border pb-2 mb-3 flex justify-between"
-                                >
-                                    <span>SYSTEM ARCHITECTURE &amp; FLOW</span>
-                                    <i
-                                        class="fa-solid fa-diagram-project text-sys-cyan"
-                                    ></i>
-                                </div>
-
-                                <!-- prettier-ignore -->
-                                <div class="text-[11px] sm:text-xs leading-relaxed text-sys-muted overflow-x-auto whitespace-pre p-2">
-<span class="text-sys-cyan">┌────────────────────────────────────────────────────────┐</span>
-<span class="text-sys-cyan">│      PC1: Control de Entrada y Salida (Main Server)     │</span>
-<span class="text-sys-cyan">│                                                        │</span>
-<span class="text-sys-cyan">│   ┌───────────────────┐        ┌───────────────────┐   │</span>
-<span class="text-sys-cyan">│   │   GUI (PySide6)   │  ◄──►  │   Django REST API │   │</span>
-<span class="text-sys-cyan">│   └───────────────────┘        └─────────┬─────────┘   │</span>
-<span class="text-sys-cyan">│                                          │             │</span>
-<span class="text-sys-cyan">│   ┌───────────────────┐                  │ (Docker)    │</span>
-<span class="text-sys-cyan">│   │  PostgreSQL DB    │ ◄────────────────┘             │</span>
-<span class="text-sys-cyan">│   └───────────────────┘                                │</span>
-<span class="text-sys-cyan">└──────────────▲─────────────────────────────────▲───────┘</span>
-                │                  │
-                │ HTTP API         │ HTTP API
-                ▼                  ▼
-<span class="text-sys-purple">┌───────────────────────────────┐</span>   <span class="text-sys-green">┌───────────────────────────────┐</span>
-<span class="text-sys-purple">│ PC2: Carga de Maleza/Humedad  │</span>   <span class="text-sys-green">│ PC3: Administración           │</span>
-<span class="text-sys-purple">│  ┌────────────────────────┐   │</span>   <span class="text-sys-green">│  ┌────────────────────────┐   │</span>
-<span class="text-sys-purple">│  │     GUI (PySide6)      │   │</span>   <span class="text-sys-green">│  │  Softland ERP System   │   │</span>
-<span class="text-sys-purple">│  └────────────────────────┘   │</span>   <span class="text-sys-green">│  └────────────────────────┘   │</span>
-<span class="text-sys-purple">└───────────────────────────────┘</span>   <span class="text-sys-green">└───────────────────────────────┘</span>
-               </div>
+                                class="text-xs text-sys-muted border-b border-sys-border pb-2 mb-3 flex justify-between">
+                                <span>SYSTEM ARCHITECTURE &amp; FLOW</span>
+                                <i class="fa-solid fa-diagram-project text-sys-cyan"></i>
                             </div>
+
+                            <!-- prettier-ignore -->
+                            <pre
+                                class="font-mono text-[11px] sm:text-xs leading-relaxed text-sys-muted overflow-x-auto p-2">
+<span class="text-sys-cyan">┌──────────────────────────────────────────────────────────────────────┐</span>
+<span class="text-sys-cyan">│               PC1: Entry &amp; Exit Control (Main Server)                │</span>
+<span class="text-sys-cyan">│                                                                      │</span>
+<span class="text-sys-cyan">│   ┌───────────────────┐               ┌───────────────────────────┐  │</span>
+<span class="text-sys-cyan">│   │   GUI (PySide6)   │ ◄───────────► │  Django REST API (Docker) │  │</span>
+<span class="text-sys-cyan">│   └───────────────────┘               └─────────────┬─────────────┘  │</span>
+<span class="text-sys-cyan">│                                                     │                │</span>
+<span class="text-sys-cyan">│   ┌───────────────────┐                             │                │</span>
+<span class="text-sys-cyan">│   │   PostgreSQL DB   │ ◄───────────────────────────┘                │</span>
+<span class="text-sys-cyan">│   └───────────────────┘                                              │</span>
+<span class="text-sys-cyan">└───────────────────────────────────┬──────────────────────────────────┘</span>
+                                    │
+                             <span class="text-sys-green">HTTP REST API</span>
+                                    │
+                ┌───────────────────┴───────────────────┐
+                ▼                                       ▼
+<span class="text-sys-purple">┌───────────────────────────────┐</span>      <span class="text-sys-green">┌───────────────────────────────┐</span>
+<span class="text-sys-purple">│  PC2: Quality &amp; Moisture Ctrl │</span>      <span class="text-sys-green">│      PC3: Administration      │</span>
+<span class="text-sys-purple">│   ┌───────────────────────┐   │</span>      <span class="text-sys-green">│   ┌───────────────────────┐   │</span>
+<span class="text-sys-purple">│   │     GUI (PySide6)     │   │</span>      <span class="text-sys-green">│   │  Softland ERP System  │   │</span>
+<span class="text-sys-purple">│   └───────────────────────┘   │</span>      <span class="text-sys-green">│   └───────────────────────┘   │</span>
+<span class="text-sys-purple">└───────────────────────────────┘</span>      <span class="text-sys-green">└───────────────────────────────┘</span></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT CARD 3: VSSS -->
+                <div
+                    class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-6 hover:border-sys-muted/50 transition-colors">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-sys-border pb-4">
+                        <div>
+                            <div class="flex items-center space-x-2 text-xs font-mono text-sys-cyan mb-1">
+                                <span>ROBOTICS • CONTROL THEORY &amp;
+                                    SCIENTIFIC PYTHON</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">
+                                VSSS PC Control System
+                            </h3>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+                            <a href="https://github.com/gabyds01/vsss-pc" target="_blank" rel="noopener noreferrer"
+                                class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github text-[12px]"></i>
+                                <span>Repository</span>
+                            </a>
+                            <span
+                                class="bg-sys-hover/50 text-sys-muted border border-sys-border px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                                <i class="fa-solid fa-hourglass-half text-[10px] mr-1"></i>
+                                Standby / Core Dev
+                            </span>
                         </div>
                     </div>
 
-                    <!-- PROJECT CARD 2 -->
-                    <div
-                        class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-6 hover:border-sys-muted/50 transition-colors"
-                    >
-                        <div
-                            class="flex flex-wrap items-center justify-between gap-3 border-b border-sys-border pb-4"
-                        >
-                            <div>
-                                <div
-                                    class="flex items-center space-x-2 text-xs font-mono text-sys-cyan mb-1"
-                                >
-                                    <span
-                                        >ROBOTICS • CONTROL THEORY &amp;
-                                        SCIENTIFIC PYTHON</span
-                                    >
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <!-- Description & Details -->
+                        <div class="lg:col-span-5 space-y-4">
+                            <p class="text-sm text-sys-muted leading-relaxed">
+                                <strong>Description:</strong> Engineered the
+                                core design and initial codebase of the
+                                PC-side real-time control loop for
+                                <strong>Very Small Size Soccer (VSSS)</strong>
+                                autonomous robots. Translates raw vision
+                                sensor telemetry into precise wheel
+                                velocities in closed-loop systems. This work
+                                is the foundation for the co-authored paper
+                                <em>"Experimental comparison of trajectory
+                                    tracking controllers for a differential-drive
+                                    robot"</em>, evaluating 18 test conditions
+                                across three reference geometries and two
+                                speeds.
+                            </p>
+
+                            <div class="space-y-2 text-xs font-mono text-sys-text">
+                                <div class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-chevron-right text-sys-green mt-0.5"></i>
+                                    <span><strong>Technical Challenge:</strong>
+                                        Implementing highly reliable
+                                        closed-loop trajectory tracking
+                                        (unicycle kinematic conversion to
+                                        differential drive wheel speeds)
+                                        under microsecond-level timing
+                                        constraints on standard PCs over
+                                        unstable wireless interfaces.</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-white">
-                                    VSSS PC Control System
-                                </h3>
+                                <div class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-chevron-right text-sys-green mt-0.5"></i>
+                                    <span><strong>Solution:</strong>
+                                        Implemented a modular Python package
+                                        with
+                                        <strong>LQR tracking</strong>
+                                        (Kanayama error projection, exact
+                                        matrix exponential discretization,
+                                        offline gain synthesis) and
+                                        <strong>Pure Pursuit</strong>
+                                        controllers. Built
+                                        curvature-adaptive speed
+                                        controllers, parametric
+                                        spline/S-curve path generators,
+                                        asynchronous
+                                        <strong>Protobuf UDP</strong> vision
+                                        deserialization, ESP32 USB-serial
+                                        bridge packaging with
+                                        <strong>CRC-8</strong>, and live
+                                        telemetry profiling tools.</span>
+                                </div>
                             </div>
-                            <div
-                                class="flex flex-wrap items-center gap-2 font-mono text-xs"
-                            >
-                                <a
-                                    href="https://github.com/gabyds01/vsss-pc"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="bg-sys-hover hover:bg-sys-border border border-sys-border text-sys-text px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-colors"
-                                >
-                                    <i
-                                        class="fa-brands fa-github text-[12px]"
-                                    ></i>
-                                    <span>Repository</span>
-                                </a>
+
+                            <!-- Skills Tags -->
+                            <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono">
                                 <span
-                                    class="bg-sys-hover/50 text-sys-muted border border-sys-border px-2.5 py-1 rounded-md flex items-center gap-1.5"
-                                >
-                                    <i
-                                        class="fa-solid fa-hourglass-half text-[10px] mr-1"
-                                    ></i>
-                                    Standby / Core Dev
-                                </span>
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">Theory
+                                    of Control</span>
+                                <span class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">LQR /
+                                    Pure Pursuit</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan">Kinematics
+                                    Model</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">Python
+                                    / uv</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">Protobuf
+                                    / UDP</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text">Matplotlib
+                                    / Numpy</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green">ESP-NOW
+                                    / Serial</span>
+                                <span
+                                    class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green">Scientific
+                                    Computing</span>
                             </div>
                         </div>
 
-                        <div
-                            class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
-                        >
-                            <!-- Description & Details -->
-                            <div class="lg:col-span-5 space-y-4">
-                                <p
-                                    class="text-sm text-sys-muted leading-relaxed"
-                                >
-                                    <strong>Description:</strong> Engineered the
-                                    core design and initial codebase of the
-                                    PC-side real-time control loop for
-                                    <strong
-                                        >Very Small Size Soccer (VSSS)</strong
-                                    >
-                                    autonomous robots. Translates raw vision
-                                    sensor telemetry into precise wheel
-                                    velocities in closed-loop systems. This work
-                                    serves as the foundation for a co-authored
-                                    scientific robotics paper.
-                                </p>
-
-                                <div
-                                    class="space-y-2 text-xs font-mono text-sys-text"
-                                >
-                                    <div class="flex items-start space-x-2">
-                                        <i
-                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
-                                        ></i>
-                                        <span
-                                            ><strong
-                                                >Technical Challenge:</strong
-                                            >
-                                            Implementing highly reliable
-                                            closed-loop trajectory tracking
-                                            (unicycle kinematic conversion to
-                                            differential drive wheel speeds)
-                                            under microsecond-level timing
-                                            constraints on standard PCs over
-                                            unstable wireless interfaces.</span
-                                        >
-                                    </div>
-                                    <div class="flex items-start space-x-2">
-                                        <i
-                                            class="fa-solid fa-chevron-right text-sys-green mt-0.5"
-                                        ></i>
-                                        <span
-                                            ><strong>Solution:</strong>
-                                            Implemented a modular Python package
-                                            with
-                                            <strong>LQR tracking</strong>
-                                            (Kanayama error projection, wall
-                                            gain-scheduling) and
-                                            <strong>Pure Pursuit</strong>
-                                            controllers. Built
-                                            curvature-adaptive speed
-                                            controllers, parametric
-                                            spline/S-curve path generators,
-                                            asynchronous
-                                            <strong>Protobuf UDP</strong> vision
-                                            deserialization, ESP32 USB-serial
-                                            bridge packaging with
-                                            <strong>CRC-8</strong>, and live
-                                            telemetry profiling tools.</span
-                                        >
-                                    </div>
-                                </div>
-
-                                <!-- Skills Tags -->
-                                <div
-                                    class="pt-2 flex flex-wrap gap-2 text-xs font-mono"
-                                >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >Theory of Control</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >LQR / Pure Pursuit</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-cyan"
-                                        >Kinematics Model</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >Python / uv</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >Protobuf / UDP</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-text"
-                                        >Matplotlib / Numpy</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
-                                        >ESP-NOW / Serial</span
-                                    >
-                                    <span
-                                        class="bg-sys-bg border border-sys-border px-2.5 py-1 rounded text-sys-green"
-                                        >Scientific Computing</span
-                                    >
-                                </div>
+                        <!-- System Architecture -->
+                        <div class="lg:col-span-7 bg-sys-bg border border-sys-border rounded-lg p-4 font-mono text-xs">
+                            <div
+                                class="text-xs text-sys-muted border-b border-sys-border pb-2 mb-3 flex justify-between">
+                                <span>SYSTEM ARCHITECTURE &amp; FLOW</span>
+                                <i class="fa-solid fa-diagram-project text-sys-cyan"></i>
                             </div>
 
-                            <!-- System Architecture -->
-                            <div
-                                class="lg:col-span-7 bg-sys-bg border border-sys-border rounded-lg p-4 font-mono text-xs"
-                            >
-                                <div
-                                    class="text-xs text-sys-muted border-b border-sys-border pb-2 mb-3 flex justify-between"
-                                >
-                                    <span>SYSTEM ARCHITECTURE &amp; FLOW</span>
-                                    <i
-                                        class="fa-solid fa-diagram-project text-sys-cyan"
-                                    ></i>
-                                </div>
-
-                                <!-- prettier-ignore -->
-                                <div class="text-[11px] sm:text-xs leading-relaxed text-sys-muted overflow-x-auto whitespace-pre p-2">
+                            <!-- prettier-ignore -->
+                            <pre
+                                class="font-mono text-[11px] sm:text-xs leading-relaxed text-sys-muted overflow-x-auto p-2">
    <span class="text-sys-cyan">┌─────────────────────────────────┐</span>
    <span class="text-sys-cyan">│      Vision / FIRASim (UDP)     │</span>
    <span class="text-sys-cyan">└─────────────────────────────────┘</span>
@@ -757,132 +586,126 @@
                             ▼
                     <span class="text-sys-text">┌──────────────┐</span>
                     <span class="text-sys-text">│ VSSS Robots  │</span>
-                    <span class="text-sys-text">└──────────────┘</span>
-                                </div>
-                            </div>
+                    <span class="text-sys-text">└──────────────┘</span></pre>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- STACK DE TECNOLOGÍAS -->
-            <section id="stack" class="space-y-6">
-                <div class="border-b border-sys-border pb-4">
-                    <h2
-                        class="text-2xl font-bold text-white tracking-tight flex items-center gap-2"
-                    >
-                        <span class="text-sys-green font-mono text-lg"
-                            >&gt;</span
-                        >
-                        Technologies Matrix &amp; Stack
-                    </h2>
-                    <p class="text-xs font-mono text-sys-muted mt-1">
-                        Layered classification of my engineering and development
-                        stack
-                    </p>
+        <!-- STACK DE TECNOLOGÍAS -->
+        <section id="stack" class="space-y-6">
+            <div class="border-b border-sys-border pb-4">
+                <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+                    <span class="text-sys-green font-mono text-lg">&gt;</span>
+                    Technologies Matrix &amp; Stack
+                </h2>
+                <p class="text-xs font-mono text-sys-muted mt-1">
+                    Layered classification of my engineering and development
+                    stack
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+                <!-- Layer 1: Backend -->
+                <div class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3">
+                    <div
+                        class="flex items-center justify-between text-sys-cyan font-bold border-b border-sys-border pb-2">
+                        <span>L1 :: BACKEND</span>
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <ul class="space-y-2 text-sys-muted">
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">Python</span>
+                            <span class="text-sys-green">Advanced</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">C / C++</span>
+                            <span class="text-sys-green">Advanced</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">Django / DRF</span>
+                            <span class="text-sys-green">Advanced</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">PostgreSQL</span>
+                            <span class="text-sys-cyan">Proficient</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div
-                    class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs"
-                >
-                    <!-- Layer 1: Backend -->
+                <!-- Layer 2: Infrastructure -->
+                <div class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3">
                     <div
-                        class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3"
-                    >
-                        <div
-                            class="flex items-center justify-between text-sys-cyan font-bold border-b border-sys-border pb-2"
-                        >
-                            <span>L1 :: BACKEND</span>
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <ul class="space-y-2 text-sys-muted">
-                            <li class="flex justify-between">
-                                <span class="text-sys-text">Python</span>
-                                <span class="text-sys-green">Advanced</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-sys-text">C / C++</span>
-                                <span class="text-sys-green">Advanced</span>
-                            </li>
-                        </ul>
+                        class="flex items-center justify-between text-sys-purple font-bold border-b border-sys-border pb-2">
+                        <span>L2 :: INFRASTRUCTURE</span>
+                        <i class="fa-solid fa-cloud"></i>
                     </div>
-
-                    <!-- Layer 2: Infrastructure -->
-                    <div
-                        class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3"
-                    >
-                        <div
-                            class="flex items-center justify-between text-sys-purple font-bold border-b border-sys-border pb-2"
-                        >
-                            <span>L2 :: INFRASTRUCTURE</span>
-                            <i class="fa-solid fa-cloud"></i>
-                        </div>
-                        <ul class="space-y-2 text-sys-muted">
-                            <li class="flex justify-between">
-                                <span class="text-sys-text">Docker</span>
-                                <span class="text-sys-green">Advanced</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-sys-text">CI/CD</span>
-                                <span class="text-sys-green">Advanced</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-sys-text">Linux</span>
-                                <span class="text-sys-green">Advanced</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Layer 3: Protocols -->
-                    <div
-                        class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3"
-                    >
-                        <div
-                            class="flex items-center justify-between text-sys-green font-bold border-b border-sys-border pb-2"
-                        >
-                            <span>L3 :: PROTOCOLS &amp; NETWORKS</span>
-                            <i class="fa-solid fa-network-wired"></i>
-                        </div>
-                        <ul class="space-y-2 text-sys-muted">
-                            <li class="flex justify-between">
-                                <span class="text-sys-text">MQTT</span>
-                                <span class="text-sys-green">Advanced</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-sys-text">Mesh Networks</span>
-                                <span class="text-sys-green">Advanced</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-sys-text">TCP/IP</span>
-                                <span class="text-sys-green">Advanced</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ACADEMIC FORMATION -->
-            <section id="education" class="space-y-6">
-                <div class="border-b border-sys-border pb-4">
-                    <h2
-                        class="text-2xl font-bold text-white tracking-tight flex items-center gap-2"
-                    >
-                        <span class="text-sys-green font-mono text-lg"
-                            >&gt;</span
-                        >
-                        Academic Formation
-                    </h2>
-                    <p class="text-xs font-mono text-sys-muted mt-1">
-                        Theoretical foundation and engineering background
-                    </p>
+                    <ul class="space-y-2 text-sys-muted">
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">Docker</span>
+                            <span class="text-sys-green">Advanced</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">Linux</span>
+                            <span class="text-sys-green">Advanced</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">Git / GitHub</span>
+                            <span class="text-sys-green">Advanced</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">CI/CD</span>
+                            <span class="text-sys-cyan">Proficient</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div
-                    class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-4"
-                >
+                <!-- Layer 3: Protocols -->
+                <div class="bg-sys-card border border-sys-border rounded-xl p-5 space-y-3">
                     <div
-                        class="flex flex-wrap items-center justify-between gap-2 border-b border-sys-border pb-3"
-                    >
+                        class="flex items-center justify-between text-sys-green font-bold border-b border-sys-border pb-2">
+                        <span>L3 :: PROTOCOLS &amp; NETWORKS</span>
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <ul class="space-y-2 text-sys-muted">
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">ESP-MESH / Mesh</span>
+                            <span class="text-sys-green">Advanced</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">TCP/IP</span>
+                            <span class="text-sys-green">Advanced</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">MQTT</span>
+                            <span class="text-sys-cyan">Proficient</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-sys-text">Protobuf / UDP</span>
+                            <span class="text-sys-cyan">Proficient</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADEMIC FORMATION -->
+        <section id="education" class="space-y-6">
+            <div class="border-b border-sys-border pb-4">
+                <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+                    <span class="text-sys-green font-mono text-lg">&gt;</span>
+                    Academic Formation
+                </h2>
+                <p class="text-xs font-mono text-sys-muted mt-1">
+                    Theoretical foundation and engineering background
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Degree -->
+                <div class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sys-border pb-3">
                         <div>
                             <h3 class="text-lg font-bold text-white">
                                 Computer Engineer
@@ -891,182 +714,179 @@
                                 Universidad Nacional de Misiones (UNaM)
                             </p>
                         </div>
-                        <span
-                            class="text-xs font-mono text-sys-green bg-sys-green/10 border border-sys-green/30 px-2.5 py-1 rounded"
-                            >Completed</span
-                        >
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="text-xs font-mono text-sys-muted bg-sys-hover border border-sys-border px-2.5 py-1 rounded">2019
+                                – 2026</span>
+                            <span
+                                class="text-xs font-mono text-sys-green bg-sys-green/10 border border-sys-green/30 px-2.5 py-1 rounded">Completed</span>
+                        </div>
                     </div>
 
                     <div class="space-y-4">
+                        <!-- Thesis -->
+                        <div class="bg-sys-bg rounded-lg border border-sys-border p-3 space-y-1">
+                            <div class="flex items-center gap-2 text-xs font-mono">
+                                <i class="fa-solid fa-scroll text-sys-cyan text-[10px]"></i>
+                                <span class="text-sys-muted">THESIS</span>
+                            </div>
+                            <p class="text-sm text-sys-text font-semibold">
+                                AI-Based Monitoring &amp; Early Warning System for Protected Areas
+                            </p>
+                            <p class="text-[10px] font-mono text-sys-muted">
+                                Advisor: Dr. Ing. Sergio Moya • Co-authored with Fabrizio Contigiani
+                            </p>
+                        </div>
+
                         <h4 class="text-xs font-bold text-sys-text uppercase">
                             Relevant Courses &amp; Training
                         </h4>
-                        <div
-                            class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs font-mono text-sys-muted"
-                        >
-                            <div
-                                class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text"
-                            >
-                                <i
-                                    class="fa-solid fa-check text-sys-green mr-1.5"
-                                ></i
-                                >Embedded Systems &amp; IoT
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs font-mono text-sys-muted">
+                            <div class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text">
+                                <i class="fa-solid fa-check text-sys-green mr-1.5"></i>Embedded Systems &amp; IoT
                             </div>
-                            <div
-                                class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text"
-                            >
-                                <i
-                                    class="fa-solid fa-check text-sys-green mr-1.5"
-                                ></i
-                                >Artificial Intelligence &amp; Computer Vision
+                            <div class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text">
+                                <i class="fa-solid fa-check text-sys-green mr-1.5"></i>Artificial Intelligence &amp; CV
                             </div>
-                            <div
-                                class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text"
-                            >
-                                <i
-                                    class="fa-solid fa-check text-sys-green mr-1.5"
-                                ></i
-                                >Cloud Architecture &amp; DevOps
+                            <div class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text">
+                                <i class="fa-solid fa-check text-sys-green mr-1.5"></i>Cloud Architecture &amp; DevOps
+                            </div>
+                            <div class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text">
+                                <i class="fa-solid fa-check text-sys-green mr-1.5"></i>Object-Oriented Programming
+                            </div>
+                            <div class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text">
+                                <i class="fa-solid fa-check text-sys-green mr-1.5"></i>Database Systems
+                            </div>
+                            <div class="bg-sys-bg p-2 rounded border border-sys-border text-sys-text">
+                                <i class="fa-solid fa-check text-sys-green mr-1.5"></i>Software Engineering I &amp; II
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- CONTACT -->
-            <section id="contact" class="space-y-6">
-                <div class="border-b border-sys-border pb-4">
-                    <h2
-                        class="text-2xl font-bold text-white tracking-tight flex items-center gap-2"
-                    >
-                        <span class="text-sys-green font-mono text-lg"
-                            >&gt;</span
-                        >
-                        Direct Contact
-                    </h2>
-                    <p class="text-xs font-mono text-sys-muted mt-1">
-                        Have a project or opportunity? Let's connect
+                <!-- Professional Internship -->
+                <div class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sys-border pb-3">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">
+                                Professional Internship (PPS)
+                            </h3>
+                            <p class="text-xs font-mono text-sys-cyan">
+                                Martin Bauer Argentina
+                            </p>
+                        </div>
+                        <span
+                            class="text-xs font-mono text-sys-muted bg-sys-hover border border-sys-border px-2.5 py-1 rounded">2025</span>
+                    </div>
+                    <p class="text-sm text-sys-muted leading-relaxed">
+                        Developed weighing record editing workflows and automated PDF ticket generation
+                        for the GaritaSystem enterprise application. Extended a legacy codebase with
+                        state-validated edit mechanics and silent printing integration.
                     </p>
                 </div>
 
-                <div class="w-full">
-                    <!-- Contact info channels -->
-                    <div
-                        class="bg-sys-card border border-sys-border rounded-xl p-6 space-y-4 font-mono text-xs"
-                    >
-                        <div
-                            class="text-sys-text font-bold text-sm border-b border-sys-border pb-2"
-                        >
-                            CONTACT INFORMATION
+                <!-- Extracurricular -->
+                <div class="bg-sys-card border border-sys-border rounded-xl p-6 sm:p-8 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sys-border pb-3">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">
+                                VSSS Robotics Team
+                            </h3>
+                            <p class="text-xs font-mono text-sys-cyan">
+                                UNaM — Very Small Size Soccer
+                            </p>
+                        </div>
+                        <span
+                            class="text-xs font-mono text-sys-muted bg-sys-hover border border-sys-border px-2.5 py-1 rounded">2025
+                            – 2026</span>
+                    </div>
+                    <p class="text-sm text-sys-muted leading-relaxed">
+                        Core developer of the PC-side real-time control loop for autonomous soccer robots.
+                        Co-authored <em>"Experimental comparison of trajectory tracking controllers
+                            for a differential-drive robot"</em> — evaluating Pure Pursuit vs. LQR across
+                        18 test conditions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="space-y-6">
+            <div class="border-b border-sys-border pb-4">
+                <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+                    <span class="text-sys-green font-mono text-lg">&gt;</span>
+                    Direct Contact
+                </h2>
+                <p class="text-xs font-mono text-sys-muted mt-1">
+                    Have a project or opportunity? Let's connect
+                </p>
+            </div>
+
+            <div class="w-full">
+                <!-- Contact info channels -->
+                <div class="bg-sys-card border border-sys-border rounded-xl p-6 space-y-4 font-mono text-xs">
+                    <div class="text-sys-text font-bold text-sm border-b border-sys-border pb-2">
+                        CONTACT INFORMATION
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-2">
+                        <!-- Email (clickable / touchable) -->
+                        <div onclick="copyEmail()"
+                            class="flex items-center space-x-3 text-sys-muted cursor-pointer hover:bg-sys-hover/50 p-2 rounded transition-colors flex-1">
+                            <span class="p-2 bg-sys-bg rounded text-sys-cyan"><i
+                                    class="fa-solid fa-envelope"></i></span>
+                            <div>
+                                <span class="block text-[10px] text-sys-muted">EMAIL
+                                    <span id="copy-email-status"
+                                        class="text-[9px] text-sys-green font-bold ml-1.5 hidden">Copied!</span></span>
+                                <span class="text-sys-text font-semibold">gabyingds01@gmail.com</span>
+                            </div>
                         </div>
 
-                        <div
-                            class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-2"
-                        >
-                            <!-- Email (clickable / touchable) -->
-                            <div
-                                onclick="copyEmail()"
-                                class="flex items-center space-x-3 text-sys-muted cursor-pointer hover:bg-sys-hover/50 p-2 rounded transition-colors flex-1"
-                            >
-                                <span
-                                    class="p-2 bg-sys-bg rounded text-sys-cyan"
-                                    ><i class="fa-solid fa-envelope"></i
-                                ></span>
-                                <div>
-                                    <span
-                                        class="block text-[10px] text-sys-muted"
-                                        >EMAIL
-                                        <span
-                                            id="copy-email-status"
-                                            class="text-[9px] text-sys-green font-bold ml-1.5 hidden"
-                                            >Copied!</span
-                                        ></span
-                                    >
-                                    <span class="text-sys-text font-semibold"
-                                        >gabyingds01@gmail.com</span
-                                    >
-                                </div>
+                        <!-- GitHub -->
+                        <div class="flex items-center space-x-3 text-sys-muted p-2 rounded flex-1">
+                            <span class="p-2 bg-sys-bg rounded text-sys-green"><i
+                                    class="fa-brands fa-github"></i></span>
+                            <div>
+                                <span class="block text-[10px] text-sys-muted">GITHUB</span>
+                                <a href="https://github.com/gabyds01" target="_blank" rel="noopener"
+                                    class="text-sys-text hover:text-sys-cyan font-semibold">github.com/gabyds01</a>
                             </div>
+                        </div>
 
-                            <!-- GitHub -->
-                            <div
-                                class="flex items-center space-x-3 text-sys-muted p-2 rounded flex-1"
-                            >
-                                <span
-                                    class="p-2 bg-sys-bg rounded text-sys-green"
-                                    ><i class="fa-brands fa-github"></i
-                                ></span>
-                                <div>
-                                    <span
-                                        class="block text-[10px] text-sys-muted"
-                                        >GITHUB</span
-                                    >
-                                    <a
-                                        href="https://github.com/gabyds01"
-                                        target="_blank"
-                                        rel="noopener"
-                                        class="text-sys-text hover:text-sys-cyan font-semibold"
-                                        >github.com/gabyds01</a
-                                    >
-                                </div>
-                            </div>
-
-                            <!-- LinkedIn -->
-                            <div
-                                class="flex items-center space-x-3 text-sys-muted p-2 rounded flex-1"
-                            >
-                                <span
-                                    class="p-2 bg-sys-bg rounded text-sys-purple"
-                                    ><i class="fa-brands fa-linkedin"></i
-                                ></span>
-                                <div>
-                                    <span
-                                        class="block text-[10px] text-sys-muted"
-                                        >LINKEDIN</span
-                                    >
-                                    <a
-                                        href="https://linkedin.com/in/dsch-gabriel"
-                                        target="_blank"
-                                        rel="noopener"
-                                        class="text-sys-text hover:text-sys-cyan font-semibold"
-                                        >linkedin.com/in/dsch-gabriel</a
-                                    >
-                                </div>
+                        <!-- LinkedIn -->
+                        <div class="flex items-center space-x-3 text-sys-muted p-2 rounded flex-1">
+                            <span class="p-2 bg-sys-bg rounded text-sys-purple"><i
+                                    class="fa-brands fa-linkedin"></i></span>
+                            <div>
+                                <span class="block text-[10px] text-sys-muted">LINKEDIN</span>
+                                <a href="https://linkedin.com/in/dsch-gabriel" target="_blank" rel="noopener"
+                                    class="text-sys-text hover:text-sys-cyan font-semibold">linkedin.com/in/dsch-gabriel</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-
-        <!-- FOOTER -->
-        <footer
-            class="border-t border-sys-border bg-sys-card px-4 py-6 text-xs font-mono text-sys-muted mt-16"
-        >
-            <div
-                class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4"
-            >
-                <div>
-                    <p>&copy; 2026 Gabriel Da Silva. All rights reserved.</p>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a
-                        href="https://github.com/gabyds01"
-                        target="_blank"
-                        rel="noopener"
-                        class="hover:text-sys-cyan"
-                        >GitHub</a
-                    >
-                    <span>•</span>
-                    <a
-                        href="https://linkedin.com/in/dsch-gabriel"
-                        target="_blank"
-                        rel="noopener"
-                        class="hover:text-sys-cyan"
-                        >LinkedIn</a
-                    >
-                </div>
             </div>
-        </footer>
-    </body>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-sys-border bg-sys-card px-4 py-6 text-xs font-mono text-sys-muted mt-16">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> Gabriel Da Silva. All rights reserved.
+                </p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com/gabyds01" target="_blank" rel="noopener"
+                    class="hover:text-sys-cyan">GitHub</a>
+                <span>•</span>
+                <a href="https://linkedin.com/in/dsch-gabriel" target="_blank" rel="noopener"
+                    class="hover:text-sys-cyan">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>
